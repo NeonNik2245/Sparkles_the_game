@@ -9,17 +9,21 @@ public class GoToScene : MonoBehaviour
     private Transform cam;
     private Transform stuff;
     private float distanse;
+    public bool isExit = false;
 
     void Update()
     {
-        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
-        stuff = GetComponent<Transform>();
-        distanse = Vector3.Distance(cam.position, stuff.position); 
-        // Debug.Log(distanse);
-        if (Input.GetKeyDown(KeyCode.Z)) 
-        {
-            if (distanse < offset) SceneManager.LoadScene(sceneName); 
-            else Debug.Log("далеко кликаешь бро " + distanse);
+        if (isExit) if (Input.GetKeyDown(KeyCode.Z)) if (distanse < offset) Application.Quit(); 
+        else {
+            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
+            stuff = GetComponent<Transform>();
+            distanse = Vector3.Distance(cam.position, stuff.position); 
+            // Debug.Log(distanse);
+            if (Input.GetKeyDown(KeyCode.Z)) 
+            {
+                if (distanse < offset) SceneManager.LoadScene(sceneName); 
+                else Debug.Log("далеко кликаешь бро " + distanse);
+            }
         }
 
     }

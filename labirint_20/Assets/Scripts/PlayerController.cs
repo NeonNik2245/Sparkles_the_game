@@ -17,7 +17,7 @@ public class MouseCamera : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     // Гравитация
-    private float gravityValue = -9.87f;
+    private float gravityValue = -9.87f + 2.0f;
     public static bool moving = true;
     void Start()
     {
