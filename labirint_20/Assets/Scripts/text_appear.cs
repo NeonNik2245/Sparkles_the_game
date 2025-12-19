@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using LLMUnitySamples;
+using Unity.VisualScripting;
 
 public class text_appear : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class text_appear : MonoBehaviour
     private Transform stuff;
     private float distanse;
     private bool turn = true;
+    public static bool resetTurn = false;
     public float rotationSpeed = 100f; 
     public bool isrotate = true;
     public static bool isactive = true;
@@ -23,6 +25,7 @@ public class text_appear : MonoBehaviour
     public GameObject objhide;
     
     public int mem = 1;
+    public int id_task = 0;
 
     void Start()
     {
@@ -31,6 +34,11 @@ public class text_appear : MonoBehaviour
 
     void Update()
     {
+        if (resetTurn) {
+            turn = true;
+            resetTurn = false;
+            
+            }
         if (isactive && turn)
         {
                 Appear();
@@ -43,6 +51,7 @@ public class text_appear : MonoBehaviour
                         if (ispanel) {
                             Debug.Log(mem+" - panel");
                             panel.SetActive(true);
+                            fire_chat.id_now = id_task;
                             fire_chat.mem = mem;
                             fire_chat.isactive = true;
                             isactive = false;

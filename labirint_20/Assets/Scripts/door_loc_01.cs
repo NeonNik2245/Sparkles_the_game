@@ -1,3 +1,4 @@
+using LLMUnitySamples;
 using UnityEngine; 
 using UnityEngine.SceneManagement; 
 
@@ -13,7 +14,7 @@ public class GoToScene : MonoBehaviour
 
     void Update()
     {
-        if (isExit) if (Input.GetKeyDown(KeyCode.Z)) if (distanse < offset) Application.Quit(); 
+        if (isExit) {if (Input.GetKeyDown(KeyCode.Z)) {if (distanse < offset) Application.Quit();}} 
         else {
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Transform>();
             stuff = GetComponent<Transform>();
@@ -21,7 +22,12 @@ public class GoToScene : MonoBehaviour
             // Debug.Log(distanse);
             if (Input.GetKeyDown(KeyCode.Z)) 
             {
-                if (distanse < offset) SceneManager.LoadScene(sceneName); 
+                if (distanse < offset) {
+                    SceneManager.LoadScene(sceneName); 
+                    NPC_chat.isReset = true;
+                    text_appear.resetTurn = true;
+                    text_appear_npc.resetTurn = true;
+                }
                 else Debug.Log("далеко кликаешь бро " + distanse);
             }
         }

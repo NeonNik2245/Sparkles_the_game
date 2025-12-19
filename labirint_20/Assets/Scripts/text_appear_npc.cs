@@ -12,6 +12,7 @@ public class text_appear_npc : MonoBehaviour
     private Transform stuff;
     private float distanse;
     private bool turn = true;
+    public static bool resetTurn = false;
     public float rotationSpeed = 100f; 
     public bool isrotate = true;
     public static bool isactive = true;
@@ -23,7 +24,12 @@ public class text_appear_npc : MonoBehaviour
 
     void Update()
     {
-        if (isactive)
+        if (resetTurn) {   
+            turn = true;
+            resetTurn = false;
+            
+            }
+        if (isactive && turn)
         {
             Appear();
         if (Input.GetKeyDown(KeyCode.Z)) 

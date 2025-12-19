@@ -22,6 +22,7 @@ namespace LLMUnitySamples
         [TextArea(5, 10), Chat] public string hello_prompt = "";
         [TextArea(5, 10), Chat] public string task_prompt = "ТВОЯ ЗАДАЧА:   ПРИСЛАТЬ ОТВЕТ:";
         private string json = "";
+        public static bool isReset = false;
         public class ai_json
         {
             public int score = 0;
@@ -87,10 +88,15 @@ namespace LLMUnitySamples
                     but.SetActive(false);
                     cam_npc.SetActive(false);
                     MouseCamera.moving = true;
-                    text_appear_npc.isactive = false;
+                    text_appear_npc.isactive = true;
                     text_appear.isactive = true;
+                    num = num + 1;
                 }
             }
+            if (isReset) {
+                llmCharacter.CancelRequests();
+                isReset = false;
+                }
         }
 
         public void AIReplyComplete()

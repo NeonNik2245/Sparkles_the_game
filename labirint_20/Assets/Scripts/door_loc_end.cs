@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GoToEndScene : MonoBehaviour 
 { 
-    public int set_memory = add_score.memory;
-    public int set_chaos = add_score.chaos;
     public float offset = 10f;
 
     private Transform cam;
@@ -13,8 +11,8 @@ public class GoToEndScene : MonoBehaviour
     
     void Update() 
     { 
-        int memory = set_memory;
-        int chaos = set_chaos;
+        int memory = add_score.memory;
+        int chaos = add_score.chaos;
 
         string sceneNameEnd; 
 
@@ -25,7 +23,7 @@ public class GoToEndScene : MonoBehaviour
         {
             if (distanse < offset)
             {
-              if (chaos > 1) sceneNameEnd = "chaos end";
+              if (chaos > 1) {sceneNameEnd = "chaos end";}
                 else {
                     if (memory > 24 - 7) sceneNameEnd = "good end";
                     else if (memory > 17 - 7) sceneNameEnd = "normal end";
