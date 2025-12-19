@@ -10,7 +10,7 @@ public class score_text_m : MonoBehaviour
     void Update()
     {
         if (add_score.memory > 9) canvasText.text = add_score.memory + " :П";
-        else canvasText.text = "0" + add_score.memory + ": П";
+        else canvasText.text = "0" + add_score.memory + " :П";
         
         // Debug.Log(canvasText.text);
     }

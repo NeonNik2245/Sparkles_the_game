@@ -10,7 +10,7 @@ public class score_text_c : MonoBehaviour
     void Update()
     {
         if (add_score.chaos > 9) canvasText.text = add_score.chaos + " :Х";
-        else canvasText.text = "0" + add_score.chaos + ": Х";
+        else canvasText.text = "0" + add_score.chaos + " :Х";
         
         // Debug.Log(canvasText.text);
     }
