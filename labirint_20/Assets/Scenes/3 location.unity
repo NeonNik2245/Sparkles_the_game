@@ -414,7 +414,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.4745098, g: 0.29773185, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -750,7 +750,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: {x: -18, y: 0}
   sensitivity: 1
-  deltaMove: {x: 0, y: 0, z: 0}
   speed: 6
   mover: {fileID: 167796453}
   cameraHolder: {fileID: 1344474882}
@@ -1227,9 +1226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisobj: {fileID: 1887121817}
   offset: 15
-  score: 0
-  rotationSpeed: 100
-  isrotate: 0
 --- !u!114 &285504289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,7 +1615,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f4ff9b3e70594ca6d2869fd3050d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  but: {fileID: 1887121817}
   thing: {fileID: 867203464}
   cam: {fileID: 1344474879}
   cam_npc: {fileID: 47574874}
@@ -5901,8 +5896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3931f4a594688e948906bfe188ad13fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  set_memory: 0
-  set_chaos: 0
   offset: 10
 --- !u!114 &1449144924
 MonoBehaviour:
@@ -5919,14 +5912,14 @@ MonoBehaviour:
   thisobj: {fileID: 979681377}
   offset: 10
   score: 0
-  rotationSpeed: 100
   isrotate: 0
+  rotationSpeed: 100
   ispanel: 0
   panel: {fileID: 0}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 1
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &1461826491
 GameObject:
   m_ObjectHideFlags: 0

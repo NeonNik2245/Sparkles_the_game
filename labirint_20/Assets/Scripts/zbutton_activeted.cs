@@ -1,48 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+// Отображение диалоговой панели с нпс через кнопку [Z]
 public class zbutton_activeted : MonoBehaviour
 {
-
-    // public int display;
+    // вся панель диалога
     public GameObject thing;
+    // камера для статичного просмотра диалога с нпс
+    public GameObject cam_npc;
+    // плашка с текстом (для его скрытия и действий скрипта)
+    public GameObject but;
+    // формочка ввода текста для игрока
+    public InputField input;
+    // взаимодействие произошло?
     private bool isactivate = false;
     private GameObject cam;
 
-    public GameObject cam_npc;
-    public GameObject but;
-    public InputField input;
-
-
     void Update()
     {
+        // если плашка с текстом отображется
         if (but.activeSelf)
         {
-            if (!isactivate)
-        {
-            if (Input.GetKeyDown(KeyCode.Z))
+            // кнопка нажата и диалог ещё не происходил
+            if (!isactivate && Input.GetKeyDown(KeyCode.Z))
             {
-                // Display.displays[display].Activate();
+                // отображаем панель диалога
                 thing.SetActive(true);
+                // диалог происходит(л)
                 isactivate = true;
+                // объект главной камеры игрока
                 cam = GameObject.FindGameObjectWithTag("MainCamera");
-                // cam_npc = GameObject.FindGameObjectWithTag("npc");
+                // отключаем главную камеру игрока
                 cam.SetActive(false);
-                but.SetActive(false);
-                text_appear.isactive = false;
+                // включаем камеру направленную на нпс и диалог
                 cam_npc.SetActive(true);
+                // лишаем возможность двигаться игрока
                 MouseCamera.moving = false;
-                input.ActivateInputField();
-                // text_appear.thisobj.GetComponent<npc>
-                // isactive = false;
-                // Debug.Log(EventSystem);
+                // скрываем плашку с текстом
+                but.SetActive(false);
+                // скрытие остальных плашек с текстом
+                text_appear.isactive = false;
+                text_appear_npc.isactive = false;
+                GoToScene.isactive = false;
+                GoToEndScene.isactive = false;
+                input.ActivateInputField(); // фокус на форму ввода
             }
-        }
-        } else input.ActivateInputField();
-        
-        
+        } else input.ActivateInputField(); // фокус на форму ввода (если игрок выйдет из окна)
     }
 }

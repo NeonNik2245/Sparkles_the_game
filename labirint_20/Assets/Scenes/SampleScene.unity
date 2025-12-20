@@ -1361,7 +1361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1f4ff9b3e70594ca6d2869fd3050d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  but: {fileID: 1316384523}
   thing: {fileID: 1074190635}
   cam: {fileID: 963194225}
   cam_npc: {fileID: 807668157}
@@ -1391,7 +1390,10 @@ MonoBehaviour:
     \u0437\u043D\u0430\u0435\u0448\u044C \u0447\u0442\u043E \u043D\u0435\u0434\u0430\u043B\u0435\u043A\u043E.\r\n\r\n\u0418
     \u0437\u0430\u0432\u0435\u0440\u0448\u0430\u0435\u0448\u044C \u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440.\r\n\r\n\u041F\u0420\u0418\u0421\u041B\u0410\u0422\u042C
     \u041E\u0422\u0412\u0415\u0422:\r\n\u0412\u0430\u0436\u043D\u043E - \u043F\u0440\u0438\u0448\u043B\u0438
-    \u0432\u0441\u0435 \u043E\u0442\u0432\u0435\u0442\u044B \u0432 JSON \u0444\u043E\u0440\u043C\u0430\u0442\u0435:\r\n{\r\n\"ai_answer\":
+    \u0432\u0441\u0435 \u043E\u0442\u0432\u0435\u0442\u044B \u0432 \u043E\u0434\u043D\u043E\u043C
+    JSON \u0444\u043E\u0440\u043C\u0430\u0442\u0435 (ai_answer \u0438 ai_text \u043D\u0430\u0445\u043E\u0434\u044F\u0442\u0441\u044F
+    \u0432 \u043E\u0434\u043D\u043E\u043C json \u043A\u0430\u043A \u0438 \u0432\u0441\u0435
+    \u043E\u0441\u0442\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435):\r\n{\r\n\"ai_answer\":
     \u0442\u0432\u043E\u0439 \u043E\u0442\u0432\u0435\u0442 \u0438\u0433\u0440\u043E\u043A\u0443
     (\u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0438\u0433\u0440\u043E\u043A\u0443
     \u0433\u043E\u0432\u043E\u0440\u0438\u0448\u044C),\r\n\"ai_text\": \u0437\u0430\u043A\u043B\u044E\u0447\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0439
@@ -6528,14 +6530,14 @@ MonoBehaviour:
   thisobj: {fileID: 1777384953}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 8
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -7732,14 +7734,14 @@ MonoBehaviour:
   thisobj: {fileID: 1021651163}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 10
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1001 &807221943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9367,9 +9369,6 @@ PrefabInstance:
       addedObject: {fileID: 934448073}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3087d5e25f5ae84ab04d6df90057e0b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 934448077}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3087d5e25f5ae84ab04d6df90057e0b, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 934448080}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d3087d5e25f5ae84ab04d6df90057e0b, type: 3}
       insertIndex: -1
@@ -9406,29 +9405,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d3087d5e25f5ae84ab04d6df90057e0b, type: 3}
   m_PrefabInstance: {fileID: 934448071}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &934448077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934448072}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3863e2e4040575b42af6d0e70648eab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisobj: {fileID: 1316384523}
-  offset: 15
-  score: 0
-  rotationSpeed: 100
-  isrotate: 0
-  ispanel: 0
-  panel: {fileID: 0}
-  ishide: 0
-  objhide: {fileID: 0}
-  mem: 1
-  id_task: 0
 --- !u!114 &934448080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9459,9 +9435,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisobj: {fileID: 1316384523}
   offset: 15
-  score: 0
-  rotationSpeed: 100
-  isrotate: 0
 --- !u!1001 &941139271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10492,14 +10465,14 @@ MonoBehaviour:
   thisobj: {fileID: 1249336234}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 1
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &969812751
 GameObject:
   m_ObjectHideFlags: 0
@@ -11816,14 +11789,14 @@ MonoBehaviour:
   thisobj: {fileID: 1207510174}
   offset: 20
   score: 2
-  rotationSpeed: 100
   isrotate: 0
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 1
-  objhide: {fileID: 1053851402}
   mem: 1
   id_task: 1
+  ishide: 1
+  objhide: {fileID: 1053851402}
 --- !u!1001 &1059401986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15073,7 +15046,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turn: {x: 76, y: 0}
   sensitivity: 1
-  deltaMove: {x: 0, y: 0, z: 0}
   speed: 6
   mover: {fileID: 1269805777}
   cameraHolder: {fileID: 963194228}
@@ -16125,14 +16097,14 @@ MonoBehaviour:
   thisobj: {fileID: 1326260082}
   offset: 10
   score: 0
-  rotationSpeed: 100
   isrotate: 0
+  rotationSpeed: 100
   ispanel: 0
   panel: {fileID: 0}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 1
   id_task: 2
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &1466516569
 GameObject:
   m_ObjectHideFlags: 0
@@ -16801,14 +16773,14 @@ MonoBehaviour:
   thisobj: {fileID: 1173098858}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 4
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1001 &1557218610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17212,14 +17184,14 @@ MonoBehaviour:
   thisobj: {fileID: 368221957}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 7
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &1642562055
 GameObject:
   m_ObjectHideFlags: 0
@@ -17343,14 +17315,14 @@ MonoBehaviour:
   thisobj: {fileID: 1913737767}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 9
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &1652608224
 GameObject:
   m_ObjectHideFlags: 0
@@ -17712,14 +17684,14 @@ MonoBehaviour:
   thisobj: {fileID: 851788935}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 6
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1001 &1716690490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18645,14 +18617,14 @@ MonoBehaviour:
   thisobj: {fileID: 515630811}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 2
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1001 &1784124718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19121,14 +19093,14 @@ MonoBehaviour:
   thisobj: {fileID: 720807455}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 5
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1001 &1874074890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20077,14 +20049,14 @@ MonoBehaviour:
   thisobj: {fileID: 369734502}
   offset: 10
   score: 1
-  rotationSpeed: 100
   isrotate: 1
+  rotationSpeed: 100
   ispanel: 1
   panel: {fileID: 421095721}
-  ishide: 0
-  objhide: {fileID: 0}
   mem: 3
   id_task: 0
+  ishide: 0
+  objhide: {fileID: 0}
 --- !u!1 &2038557369
 GameObject:
   m_ObjectHideFlags: 0
